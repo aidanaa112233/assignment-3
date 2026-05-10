@@ -4,7 +4,6 @@
 
 Name:Tumenbai Aidana
 Group:SE-2511
-<img width="1920" height="1080" alt="photo_5188478553119461980_w" src="https://github.com/user-attachments/assets/0a6de9dd-7258-4869-b23b-9fa3623fe26d" />
 <img width="1920" height="1080" alt="photo_5188478553119461978_w (1)" src="https://github.com/user-attachments/assets/bad2d6dc-197d-4c47-af2e-f6a88a3f8d85" />
 <img width="1920" height="1080" alt="photo_5188478553119461979_w" src="https://github.com/user-attachments/assets/e2d1e59f-c176-4e0e-808d-fb967973fbe7" />
 <img width="1920" height="1080" alt="photo_5188478553119461980_w" src="https://github.com/user-attachments/assets/78bf6c9b-9067-4f4a-9561-617a89e37b72" />
