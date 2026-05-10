@@ -4,7 +4,8 @@ public class Main {
 
         Experiment experiment = new Experiment();
 
-        experiment.runAllExperiments();
+        experiment.runMultipleTests();
 
+        experiment.printResults();
     }
 }
