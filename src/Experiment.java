@@ -1,59 +1,69 @@
-import java.util.Arrays;
-
 public class Experiment {
 
-    Sorter sorter = new Sorter();
-    Searcher searcher = new Searcher();
+    // Run BFS and DFS with execution time
+    public void runTraversals(Graph g) {
 
-    public long measureSortTime(int[] arr, String type) {
+        long startBFS = System.nanoTime();
 
-        long start = System.nanoTime();
+        g.bfs(0);
 
-        if (type.equals("basic")) {
-            sorter.basicSort(arr);
-        } else {
-            sorter.advancedSort(arr);
-        }
+        long endBFS = System.nanoTime();
 
-        long end = System.nanoTime();
+        System.out.println("BFS Execution Time: "
+                + (endBFS - startBFS) + " ns");
 
-        return end - start;
+        System.out.println();
+
+        long startDFS = System.nanoTime();
+
+        g.dfs(0);
+
+        long endDFS = System.nanoTime();
+
+        System.out.println("DFS Execution Time: "
+                + (endDFS - startDFS) + " ns");
+
+        System.out.println("-----------------------------------");
     }
 
-    public long measureSearchTime(int[] arr, int target) {
+    // Run tests for different graph sizes
+    public void runMultipleTests() {
 
-        long start = System.nanoTime();
-
-        searcher.search(arr, target);
-
-        long end = System.nanoTime();
-
-        return end - start;
-    }
-
-    public void runAllExperiments() {
-
-        int[] sizes = {10, 100, 1000};
+        int[] sizes = {10, 30, 100};
 
         for (int size : sizes) {
 
-            int[] randomArray = sorter.generateRandomArray(size);
-            int[] sortedArray = randomArray.clone();
+            System.out.println("\nTesting Graph with "
+                    + size + " vertices");
 
-            Arrays.sort(sortedArray);
+            Graph graph = new Graph();
 
-            System.out.println("Array Size: " + size);
+            // Add vertices
+            for (int i = 0; i < size; i++) {
+                graph.addVertex(new Vertex(i));
+            }
 
-            long bubbleTime = measureSortTime(randomArray.clone(), "basic");
-            long quickTime = measureSortTime(randomArray.clone(), "advanced");
+            // Add edges
+            for (int i = 0; i < size - 1; i++) {
+                graph.addEdge(i, i + 1);
 
-            long searchTime = measureSearchTime(sortedArray, sortedArray[size / 2]);
+                if (i + 2 < size) {
+                    graph.addEdge(i, i + 2);
+                }
+            }
 
-            System.out.println("Bubble Sort Time: " + bubbleTime + " ns");
-            System.out.println("Quick Sort Time: " + quickTime + " ns");
-            System.out.println("Binary Search Time: " + searchTime + " ns");
+            // Print only small graph
+            if (size == 10) {
+                graph.printGraph();
+                System.out.println();
+            }
 
-            System.out.println(" ");
+            runTraversals(graph);
         }
+    }
+
+    public void printResults() {
+
+        System.out.println("Experiment completed successfully.");
     }
 }
