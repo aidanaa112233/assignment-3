@@ -1,53 +1,89 @@
-Student:Tumenbai Aidana
+<img width="1920" height="1080" alt="photo_5188478553119461980_w" src="https://github.com/user-attachments/assets/0a6de9dd-7258-4869-b23b-9fa3623fe26d" />Graph Traversal and Representation System
+Name:Tumenbai Aidana
 Group:SE-2511
-                                      Sorting and Searching Algorithm Analysis System
-Project Overview
+<img width="1920" height="1080" alt="photo_5188478553119461978_w (1)" src="https://github.com/user-attachments/assets/bad2d6dc-197d-4c47-af2e-f6a88a3f8d85" />
+<img width="1920" height="1080" alt="photo_5188478553119461979_w" src="https://github.com/user-attachments/assets/e2d1e59f-c176-4e0e-808d-fb967973fbe7" />
+<img width="1920" height="1080" alt="photo_5188478553119461980_w" src="https://github.com/user-attachments/assets/78bf6c9b-9067-4f4a-9561-617a89e37b72" />
+<img width="1920" height="1080" alt="photo_5188478553119461981_w" src="https://github.com/user-attachments/assets/ecc658ff-6e17-45ab-8570-70efa46d150b" />
+<img width="1920" height="1080" alt="photo_5188478553119461982_w" src="https://github.com/user-attachments/assets/3dd2facc-817c-40be-b789-1ee117e0824c" />
+<img width="1920" height="1080" alt="photo_5188478553119461983_w" src="https://github.com/user-attachments/assets/af0393fe-883f-45fa-a08c-2adb31737acb" />
+<img width="1920" height="1080" alt="photo_5188478553119461984_w" src="https://github.com/user-attachments/assets/22cf5461-e558-4b54-8fc0-7a660fabcd4d" />
+<img width="1920" height="1080" alt="photo_5188478553119461985_w" src="https://github.com/user-attachments/assets/4e6a08a8-42ef-4f3d-aede-181633cbe00f" />
+<img width="1920" height="1080" alt="photo_5188478553119461986_w" src="https://github.com/user-attachments/assets/932e0ab2-69b6-4b92-94d6-ee0e8307632f" />
+<img width="1920" height="1080" alt="photo_5188478553119461987_w" src="https://github.com/user-attachments/assets/d188d415-a715-4226-96ed-d0066f013afa" />
 
-This project is focused on comparing the performance of different sorting and searching algorithms using Java. The main goal was to understand how algorithm efficiency changes depending on input size and structure.
-In this implementation, I selected:Bubble Sort (basic sorting),Quick Sort (advanced sorting),Binary Search (searching algorithm).
-The program generates arrays of different sizes, runs algorithms on them, and measures execution time using System.nanoTime().
 
-Algorithms Description
 
-1. Bubble Sort
-Bubble Sort works by repeatedly comparing adjacent elements and swapping them if they are in the wrong order.This algorithm is simple but very slow for large datasets.
 
-2. Quick Sort
-Quick Sort uses a divide-and-conquer approach. It selects a pivot and partitions the array into smaller and larger elements, then recursively sorts them.In practice, it performs much faster than Bubble Sort.
 
-3. Binary Search
-Binary Search works only on sorted arrays. It repeatedly divides the array in half to find the target element.
-Time Complexity:
-O(log n)
-It is very efficient compared to linear search.
 
-Experimental Results
-The program was tested on arrays of sizes:
-10 (small)
-100 (medium)
-1000 (large)
-Example output:
-Array Size: 100
-Bubble Sort Time:__ns
-Quick Sort Time: ___ ns
-Binary Search Time: ______ns
+# Project Overview
+The system uses an adjacency list representation to store graph connections efficiently. The project includes implementations of: Breadth-First Search (BFS),Depth-First Search (DFS)
+The program creates graphs of different sizes and compares traversal performance using execution time measurements.
+# Graph Structure
+A graph consists of:
+Vertices (nodes)
+Edges (connections between nodes)
+In this project:
+- Vertices are represented using the Vertex class
+- Edges are represented using the Edge class
+- The graph is stored using an adjacency list
+This means vertex 0 is connected to vertices 1 and 2.
+# Adjacency List Representation
+The graph uses a HashMap<Integer, List<Integer>> as an adjacency list.
+Advantages of adjacency lists:
+Efficient memory usage
+Fast traversal
+Suitable for sparse graphs
+Easy to add edges and vertices
+# Class Descriptions
+Vertex Class:
+The Vertex class represents a node in the graph.
+Fields:
+id — unique identifier of the vertex
 
-Analysis
-From the results, Quick Sort consistently performed faster than Bubble Sort, especially as the array size increased. This matches the expected Big-O complexity, since O(n log n) grows much slower than O(n²).Bubble Sort was acceptable for small arrays but became extremely slow for larger inputs.Binary Search was very fast in all cases, but it requires the array to be sorted beforehand. That is why sorting is an important step before searching.Also, sorted arrays slightly improve performance for some algorithms, especially Bubble Sort (best case O(n)).
 
-Reflection
-During this assignment, I better understood the difference between simple and efficient algorithms. Before this, I knew Big-O notation theoretically, but now I can see how it actually affects runtime.One challenge was implementing Quick Sort correctly, especially the partition logic. Another difficulty was organizing the experiment structure and making sure the measurements were fair.
-Conclusion
-Quick Sort is significantly more efficient than Bubble Sort for large datasets. Binary Search is extremely fast but depends on sorted data.This experiment showed that choosing the right algorithm is critical for performance.
+Edge Class
+The Edge class represents a connection between two vertices.
+Fields:
+source
+destination
 
-<img width="1920" height="1080" alt="photo_5440851887994377634_w" src="https://github.com/user-attachments/assets/1aa86b68-a147-425b-9a01-9b60c9258c6f" />
-<img width="1920" height="1080" alt="photo_5440851887994377606_w" src="https://github.com/user-attachments/assets/f26052aa-d9fa-4b45-9493-1339eac74d9d" />
-<img width="1920" height="1080" alt="photo_5440851887994377621_w" src="https://github.com/user-attachments/assets/1642e026-00a3-4f72-b625-2c986bc53048" />
-<img width="1920" height="1080" alt="photo_5440851887994377622_w" src="https://github.com/user-attachments/assets/3bf1378e-31d6-49c8-a30d-52f7889a8e6e" />
-<img width="1920" height="1080" alt="photo_5440851887994377623_w" src="https://github.com/user-attachments/assets/91c861c0-1015-43f2-8521-bb1f048b2589" />
-<img width="1920" height="1080" alt="photo_5440851887994377624_w" src="https://github.com/user-attachments/assets/78f8b4e7-0c5b-4b46-9a07-8f592ea7d7a1" />
-<img width="1920" height="1080" alt="photo_5440851887994377626_w" src="https://github.com/user-attachments/assets/211f9fe5-34a8-4e96-83f1-8edfed3a0db0" />
-<img width="1920" height="1080" alt="photo_5440851887994377629_w" src="https://github.com/user-attachments/assets/51543b35-d172-451f-94df-573fd209ea12" />
-<img width="1920" height="1080" alt="photo_5440851887994377630_w" src="https://github.com/user-attachments/assets/e49a0f93-002f-4919-879b-752134952fd0" />
-<img width="1920" height="1080" alt="photo_5440851887994377631_w" src="https://github.com/user-attachments/assets/b44d2cd8-bfae-4dfb-a574-111ef448d585" />
-<img width="1920" height="1080" alt="photo_5440851887994377634_w" src="https://github.com/user-attachments/assets/0605703d-9b2e-4629-8040-c2552c31f13e" />
+Graph Class
+The Graph class manages the graph structure and traversal algorithms,The graph is implemented using an adjacency list.
+
+Experiment Class
+The Experiment class is responsible for: Running BFS and DFS,Measuring execution time,Testing different graph sizes,Printing results
+# Breadth-First Search (BFS)
+Breadth-First Search explores the graph level by level.
+The algorithm uses:
+- Queue
+- Visited set
+BFS Process
+1. Start from a selected vertex
+2. Visit all neighboring vertices
+3. Add neighbors to the queue
+4. Continue until the queue becomes empty
+
+# Observations
+- Execution time increased as the graph size became larger.
+- Both BFS and DFS showed similar performance.
+- DFS was slightly faster in some experiments because of recursive traversal.
+- Results matched the expected complexity of O(V + E).
+# Analysis Questions
+
+## How does graph size affect BFS and DFS performance?
+As the number of vertices and edges increases, traversal algorithms require more operations. Therefore, execution time becomes larger for bigger graphs.
+## Which traversal was faster in the experiments?
+DFS was slightly faster in some tests because recursion allowed direct traversal without maintaining a large queue structure.
+## Do results match the expected complexity O(V + E)?
+Yes. Both algorithms visited each vertex and edge once, which matches the theoretical complexity O(V + E).
+## How does graph structure affect traversal order?
+Traversal order depends on how vertices are connected in the adjacency list. Different edge connections produce different BFS and DFS outputs.
+## When is BFS preferred over DFS?
+BFS is preferred when searching for the shortest path or exploring nodes level by level.
+## What are the limitations of DFS?
+DFS may use large recursion depth on very large graphs and can consume more stack memory.
+# Reflection
+During this project, I learned how graph traversal algorithms work and how graphs can be represented using adjacency lists. I also improved my understanding of object-oriented programming in Java by separating the program into multiple classes.
+One of the most interesting parts was comparing BFS and DFS traversal behavior. BFS explores level by level, while DFS goes deeply into the graph before backtracking. I also learned how to measure algorithm performance using System.nanoTime() and analyze time complexity.
