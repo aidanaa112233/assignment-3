@@ -2,41 +2,51 @@ import java.util.*;
 
 public class Graph {
 
-    private Map<Integer, List<Integer>> adjacencyList;
+    private Map<Integer, List<Edge>> adjacencyList;
 
     public Graph() {
         adjacencyList = new HashMap<>();
     }
 
-    // Add vertex to graph
+    // Add vertex
     public void addVertex(Vertex v) {
         adjacencyList.putIfAbsent(v.getId(), new ArrayList<>());
     }
 
-    // Add edge between vertices
-    public void addEdge(int from, int to) {
-        adjacencyList.get(from).add(to);
+    // Add weighted edge
+    public void addEdge(int from, int to, int weight) {
 
-        // Undirected graph
-        adjacencyList.get(to).add(from);
+        adjacencyList.get(from)
+                .add(new Edge(to, weight));
+
+        adjacencyList.get(to)
+                .add(new Edge(from, weight));
     }
 
     // Print graph
     public void printGraph() {
-        System.out.println("Graph Structure:");
+
+        System.out.println("Weighted Graph Structure:");
 
         for (int vertex : adjacencyList.keySet()) {
+
             System.out.print(vertex + " -> ");
 
-            for (int neighbor : adjacencyList.get(vertex)) {
-                System.out.print(neighbor + " ");
+            for (Edge edge : adjacencyList.get(vertex)) {
+
+                System.out.print(
+                        edge.getDestination()
+                                + "("
+                                + edge.getWeight()
+                                + ") "
+                );
             }
 
             System.out.println();
         }
     }
 
-    // Breadth-First Search
+    // BFS
     public void bfs(int start) {
 
         Set<Integer> visited = new HashSet<>();
@@ -50,11 +60,15 @@ public class Graph {
         while (!queue.isEmpty()) {
 
             int current = queue.poll();
+
             System.out.print(current + " ");
 
-            for (int neighbor : adjacencyList.get(current)) {
+            for (Edge edge : adjacencyList.get(current)) {
+
+                int neighbor = edge.getDestination();
 
                 if (!visited.contains(neighbor)) {
+
                     visited.add(neighbor);
                     queue.add(neighbor);
                 }
@@ -64,7 +78,7 @@ public class Graph {
         System.out.println();
     }
 
-    // Depth-First Search
+    // DFS
     public void dfs(int start) {
 
         Set<Integer> visited = new HashSet<>();
@@ -76,18 +90,90 @@ public class Graph {
         System.out.println();
     }
 
-    // DFS helper method
-    private void dfsHelper(int vertex, Set<Integer> visited) {
+    private void dfsHelper(
+            int vertex,
+            Set<Integer> visited
+    ) {
 
         visited.add(vertex);
 
         System.out.print(vertex + " ");
 
-        for (int neighbor : adjacencyList.get(vertex)) {
+        for (Edge edge : adjacencyList.get(vertex)) {
+
+            int neighbor = edge.getDestination();
 
             if (!visited.contains(neighbor)) {
+
                 dfsHelper(neighbor, visited);
             }
+        }
+    }
+
+    // Dijkstra Algorithm
+    public void dijkstra(int start) {
+
+        int size = adjacencyList.size();
+
+        int[] distances = new int[size];
+        boolean[] visited = new boolean[size];
+
+        Arrays.fill(distances, Integer.MAX_VALUE);
+
+        distances[start] = 0;
+
+        for (int i = 0; i < size - 1; i++) {
+
+            int minVertex = -1;
+
+            for (int j = 0; j < size; j++) {
+
+                if (!visited[j] &&
+                        (minVertex == -1 ||
+                                distances[j]
+                                        < distances[minVertex])) {
+
+                    minVertex = j;
+                }
+            }
+
+            visited[minVertex] = true;
+
+            for (Edge edge :
+                    adjacencyList.get(minVertex)) {
+
+                int neighbor =
+                        edge.getDestination();
+
+                int weight =
+                        edge.getWeight();
+
+                if (!visited[neighbor]
+                        &&
+                        distances[minVertex]
+                                + weight
+                                < distances[neighbor]) {
+
+                    distances[neighbor] =
+                            distances[minVertex]
+                                    + weight;
+                }
+            }
+        }
+
+        System.out.println(
+                "Dijkstra Shortest Paths from Vertex "
+                        + start + ":"
+        );
+
+        for (int i = 0; i < size; i++) {
+
+            System.out.println(
+                    "To vertex "
+                            + i
+                            + " = "
+                            + distances[i]
+            );
         }
     }
 }
