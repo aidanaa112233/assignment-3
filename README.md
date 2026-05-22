@@ -2,18 +2,6 @@
 Name:Tumenbai Aidana
 Group:SE-2511
 # Graph Traversal and Dijkstra Algorithm Project
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 45 11" src="https://github.com/user-attachments/assets/094e815d-cf8a-40d8-8045-f602dd25c0cf" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 45 40" src="https://github.com/user-attachments/assets/623f6a4e-c0b0-410c-8e8a-ebba626f24a6" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 02" src="https://github.com/user-attachments/assets/76b1f189-510e-48a9-944b-8c26ef2e597b" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 13" src="https://github.com/user-attachments/assets/d478a823-8ad7-402c-bbfb-34d42aaf0d1d" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 23" src="https://github.com/user-attachments/assets/e54b5fe2-7d48-4ed7-bccc-5538d851d06f" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 34" src="https://github.com/user-attachments/assets/5392d88f-41f5-410a-b5c5-61a9ffc1607b" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 49" src="https://github.com/user-attachments/assets/08608646-2f65-4f36-afd2-7c8fbce34de0" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 59" src="https://github.com/user-attachments/assets/011039b9-730b-4cf9-abc8-f4a6d8ae2181" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 47 07" src="https://github.com/user-attachments/assets/613a4af6-f182-45b4-b787-3084212ba32a" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 47 19" src="https://github.com/user-attachments/assets/e9d4ae81-8515-4379-9113-1521a97f5000" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 47 27" src="https://github.com/user-attachments/assets/6602d206-acb2-435c-b103-1b17183b6290" />
-<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 47 38" src="https://github.com/user-attachments/assets/554bb7bf-804a-4f9d-9a83-bbc93d2d206d" />
 
 
 
