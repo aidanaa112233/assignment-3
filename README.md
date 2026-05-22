@@ -1,92 +1,143 @@
-                                         Graph Traversal and Representation System
-
-
-
+                                  
 Name:Tumenbai Aidana
 Group:SE-2511
-<img width="1920" height="1080" alt="photo_5188478553119461978_w (1)" src="https://github.com/user-attachments/assets/bad2d6dc-197d-4c47-af2e-f6a88a3f8d85" />
-<img width="1920" height="1080" alt="photo_5188478553119461979_w" src="https://github.com/user-attachments/assets/e2d1e59f-c176-4e0e-808d-fb967973fbe7" />
-<img width="1920" height="1080" alt="photo_5188478553119461980_w" src="https://github.com/user-attachments/assets/78bf6c9b-9067-4f4a-9561-617a89e37b72" />
-<img width="1920" height="1080" alt="photo_5188478553119461981_w" src="https://github.com/user-attachments/assets/ecc658ff-6e17-45ab-8570-70efa46d150b" />
-<img width="1920" height="1080" alt="photo_5188478553119461982_w" src="https://github.com/user-attachments/assets/3dd2facc-817c-40be-b789-1ee117e0824c" />
-<img width="1920" height="1080" alt="photo_5188478553119461983_w" src="https://github.com/user-attachments/assets/af0393fe-883f-45fa-a08c-2adb31737acb" />
-<img width="1920" height="1080" alt="photo_5188478553119461984_w" src="https://github.com/user-attachments/assets/22cf5461-e558-4b54-8fc0-7a660fabcd4d" />
-<img width="1920" height="1080" alt="photo_5188478553119461985_w" src="https://github.com/user-attachments/assets/4e6a08a8-42ef-4f3d-aede-181633cbe00f" />
-<img width="1920" height="1080" alt="photo_5188478553119461986_w" src="https://github.com/user-attachments/assets/932e0ab2-69b6-4b92-94d6-ee0e8307632f" />
-<img width="1920" height="1080" alt="photo_5188478553119461987_w" src="https://github.com/user-attachments/assets/d188d415-a715-4226-96ed-d0066f013afa" />
+# Graph Traversal and Dijkstra Algorithm Project
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 45 11" src="https://github.com/user-attachments/assets/094e815d-cf8a-40d8-8045-f602dd25c0cf" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 45 40" src="https://github.com/user-attachments/assets/623f6a4e-c0b0-410c-8e8a-ebba626f24a6" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 02" src="https://github.com/user-attachments/assets/76b1f189-510e-48a9-944b-8c26ef2e597b" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 13" src="https://github.com/user-attachments/assets/d478a823-8ad7-402c-bbfb-34d42aaf0d1d" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 23" src="https://github.com/user-attachments/assets/e54b5fe2-7d48-4ed7-bccc-5538d851d06f" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 34" src="https://github.com/user-attachments/assets/5392d88f-41f5-410a-b5c5-61a9ffc1607b" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 49" src="https://github.com/user-attachments/assets/08608646-2f65-4f36-afd2-7c8fbce34de0" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 46 59" src="https://github.com/user-attachments/assets/011039b9-730b-4cf9-abc8-f4a6d8ae2181" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 47 07" src="https://github.com/user-attachments/assets/613a4af6-f182-45b4-b787-3084212ba32a" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 47 19" src="https://github.com/user-attachments/assets/e9d4ae81-8515-4379-9113-1521a97f5000" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 47 27" src="https://github.com/user-attachments/assets/6602d206-acb2-435c-b103-1b17183b6290" />
+<img width="1600" height="900" alt="WhatsApp Image 2026-05-22 at 19 47 38" src="https://github.com/user-attachments/assets/554bb7bf-804a-4f9d-9a83-bbc93d2d206d" />
 
 
 
 
 
 
-# Project Overview
-The system uses an adjacency list representation to store graph connections efficiently. The project includes implementations of: Breadth-First Search (BFS),Depth-First Search (DFS)
-The program creates graphs of different sizes and compares traversal performance using execution time measurements.
-# Graph Structure
-A graph consists of:
-Vertices (nodes)
-Edges (connections between nodes)
-In this project:
-- Vertices are represented using the Vertex class
-- Edges are represented using the Edge class
-- The graph is stored using an adjacency list
-This means vertex 0 is connected to vertices 1 and 2.
-# Adjacency List Representation
-The graph uses a HashMap<Integer, List<Integer>> as an adjacency list.
-Advantages of adjacency lists:
-Efficient memory usage
-Fast traversal
-Suitable for sparse graphs
-Easy to add edges and vertices
-# Class Descriptions
-Vertex Class:
-The Vertex class represents a node in the graph.
-Fields:
-id — unique identifier of the vertex
 
 
-Edge Class
-The Edge class represents a connection between two vertices.
-Fields:
-source
-destination
 
-Graph Class
-The Graph class manages the graph structure and traversal algorithms,The graph is implemented using an adjacency list.
 
-Experiment Class
-The Experiment class is responsible for: Running BFS and DFS,Measuring execution time,Testing different graph sizes,Printing results
-# Breadth-First Search (BFS)
-Breadth-First Search explores the graph level by level.
-The algorithm uses:
-- Queue
-- Visited set
-BFS Process
-1. Start from a selected vertex
-2. Visit all neighboring vertices
-3. Add neighbors to the queue
-4. Continue until the queue becomes empty
 
-# Observations
-- Execution time increased as the graph size became larger.
-- Both BFS and DFS showed similar performance.
-- DFS was slightly faster in some experiments because of recursive traversal.
-- Results matched the expected complexity of O(V + E).
-# Analysis Questions
 
-## How does graph size affect BFS and DFS performance?
-As the number of vertices and edges increases, traversal algorithms require more operations. Therefore, execution time becomes larger for bigger graphs.
-## Which traversal was faster in the experiments?
-DFS was slightly faster in some tests because recursion allowed direct traversal without maintaining a large queue structure.
-## Do results match the expected complexity O(V + E)?
-Yes. Both algorithms visited each vertex and edge once, which matches the theoretical complexity O(V + E).
-## How does graph structure affect traversal order?
-Traversal order depends on how vertices are connected in the adjacency list. Different edge connections produce different BFS and DFS outputs.
-## When is BFS preferred over DFS?
-BFS is preferred when searching for the shortest path or exploring nodes level by level.
-## What are the limitations of DFS?
-DFS may use large recursion depth on very large graphs and can consume more stack memory.
-# Reflection
-During this project, I learned how graph traversal algorithms work and how graphs can be represented using adjacency lists. I also improved my understanding of object-oriented programming in Java by separating the program into multiple classes.
-One of the most interesting parts was comparing BFS and DFS traversal behavior. BFS explores level by level, while DFS goes deeply into the graph before backtracking. I also learned how to measure algorithm performance using System.nanoTime() and analyze time complexity.
+
+## Overview
+
+This project was developed in Java using Object-Oriented Programming principles. The program demonstrates graph traversal algorithms and shortest path calculation in weighted graphs.
+
+The project includes:
+
+* Breadth-First Search (BFS)
+* Depth-First Search (DFS)
+* Dijkstra’s Algorithm
+* Weighted graph structure
+* Execution time measurement
+
+---
+
+# Bonus Task Description
+
+For the bonus task, the graph project was extended to support weighted edges and Dijkstra’s shortest path algorithm.
+
+The following method was implemented:
+
+```java id="uqgrja"
+void dijkstra(int start)
+```
+
+The algorithm calculates the shortest distance from the starting vertex to all other vertices in the graph.
+
+---
+
+# Implemented Features
+
+* Added weighted edges
+* Updated the Edge class with a weight field
+* Modified the graph structure to store weighted edges
+* Implemented Dijkstra’s shortest path algorithm
+* Printed shortest path results clearly
+* Used arrays for distances and visited vertices
+* Used simple loops without PriorityQueue
+
+---
+
+# Project Structure
+
+```text id="ow93sx"
+├── Edge.java
+├── Vertex.java
+├── Graph.java
+├── Experiment.java
+└── Main.java
+```
+
+---
+
+# Weighted Graph
+
+The graph uses an adjacency list with weighted edges.
+
+Example:
+
+```text id="jlwm3p"
+0 -> 1(2) 2(5)
+```
+
+This means:
+
+* vertex 0 is connected to vertex 1 with weight 2
+* vertex 0 is connected to vertex 2 with weight 5
+
+---
+
+# Dijkstra Algorithm
+
+The algorithm works using:
+
+* distance array
+* visited array
+* loops for finding the minimum distance vertex
+
+Example arrays:
+
+```java id="wjlfgx"
+int[] distances;
+boolean[] visited;
+```
+
+The shortest distances are updated step by step until all vertices are processed.
+
+---
+
+# Example Output
+
+```text id="5sh3mn"
+Dijkstra Shortest Paths from Vertex 0:
+To vertex 0 = 0
+To vertex 1 = 2
+To vertex 2 = 4
+To vertex 3 = 6
+```
+
+---
+
+# Technologies Used
+
+* Java
+* OOP
+* Graph Algorithms
+* BFS
+* DFS
+* Dijkstra Algorithm
+
+---
+
+# Conclusion
+
+This project demonstrates graph traversal and shortest path algorithms in Java. The bonus task successfully extends the graph implementation with weighted edges and Dijkstra’s Algorithm functionality.
